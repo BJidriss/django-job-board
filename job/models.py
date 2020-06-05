@@ -1,3 +1,32 @@
 from django.db import models
 
 # Create your models here.
+
+
+'''
+django model  fiel :
+- html widget 
+- validation 
+- db size 
+'''
+JOB_TYPE = (
+    ('Full time','Full Time'),
+    ('Part Time','Part Time'),
+    )
+class job(models.Model):      # table
+    title = models.CharField(max_length = 100)   # coluunm
+    #location
+    job_type = models.CharField(max_length = 15 , choices = JOB_TYPE )
+    description = models.TextField(max_length = 1000)
+    Published_on = models.DateTimeField(auto_now = True)
+    Vacancy = models.IntegerField(default = 1)
+    Salary = models.IntegerField(default = 0)
+    exeperience = models.IntegerField(default = 1)
+
+    def __str__(self):
+        return self.title
+
+        
+
+
+
