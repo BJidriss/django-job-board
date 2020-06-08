@@ -13,7 +13,9 @@ JOB_TYPE = (
     ('Full time','Full Time'),
     ('Part Time','Part Time'),
     )
-class job(models.Model):      # table
+class job(models.Model):  
+
+    # table
     title = models.CharField(max_length = 100)   # coluunm
     #location
     job_type = models.CharField(max_length = 15 , choices = JOB_TYPE )
@@ -22,9 +24,21 @@ class job(models.Model):      # table
     Vacancy = models.IntegerField(default = 1)
     Salary = models.IntegerField(default = 0)
     exeperience = models.IntegerField(default = 1)
+    category = models.ForeignKey('Category' , on_delete = models.CASCADE )
+
 
     def __str__(self):
         return self.title
+
+
+class Category(models.Model):
+    name = models.CharField(max_length = 25)
+
+    def __str__(self):
+        return self.name 
+
+
+   
 
         
 

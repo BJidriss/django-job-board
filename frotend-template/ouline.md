@@ -1,4 +1,4 @@
-job :
+(app) job :
 - title 
 - location 
 - job type
@@ -8,13 +8,13 @@ job :
 - Salary 
 - category 
 - exeperience
-- gender 
+ 
 
 
 - apply job
 - post job 
 
-blog :
+(app) blog :
 title 
 description 
 create at 
@@ -25,9 +25,9 @@ author
 search 
 comment 
 recent posts 
-contact 
-home 
+(app) contact 
+(app) home 
 
-log in 
+(app) log in 
 
 
