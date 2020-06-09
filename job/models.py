@@ -23,7 +23,7 @@ class job(models.Model):
     Published_on = models.DateTimeField(auto_now = True)
     Vacancy = models.IntegerField(default = 1)
     Salary = models.IntegerField(default = 0)
-    exeperience = models.IntegerField(default = 1)
+    experience = models.IntegerField(default = 1)
     category = models.ForeignKey('Category' , on_delete = models.CASCADE )
 
 
